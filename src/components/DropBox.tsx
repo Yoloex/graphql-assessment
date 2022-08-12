@@ -23,7 +23,7 @@ const DropBox = () => {
   console.log(data?.retailers)
 
   return (
-    <Box sx={{display: "flex", alignItems: "center", justifyContent: "center"}}>
+    <Box sx={{display: "flex", alignItems: "center", justifyContent: "center", margin: 20}}>
       <FormControl sx={component_style}>
         <InputLabel id="simple-select-label">Name</InputLabel>
         <Select
@@ -32,7 +32,7 @@ const DropBox = () => {
           value={companyName as string}
           label="Name"
           onChange={handleChange}
-          sx={{width: "inherit"}}
+          autoWidth
         >
           {
             data?.retailers?.map((retailer, index) => (
